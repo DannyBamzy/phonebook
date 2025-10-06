@@ -33,6 +33,7 @@ let persons = [
 app.use(express.json());
 app.use(morgan('tiny'));
 app.use(cors());
+app.use(express.static('dist'));
 
 app.get('/api/persons', (req, res) => {
     res.json(persons);
